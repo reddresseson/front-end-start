@@ -76,7 +76,7 @@ function backbtnclick(){ // (<)버튼 클릭했을 때
 
 
 //초기화
-setIndex(3);
+setIndex(3); //한 페이지에 보여주고싶은 사진 갯수가 인수
 spread(page);
 
 
