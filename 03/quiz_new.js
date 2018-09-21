@@ -56,8 +56,7 @@ function spread(n){
 
 function nextbtnclick(){ // (>)버튼 클릭했을 때
     if(page===lastpage){
-        alert("마지막 페이지입니다.");
-        return;
+        page = 1;
     }
     else{
         page+=1;
@@ -67,8 +66,7 @@ function nextbtnclick(){ // (>)버튼 클릭했을 때
 
 function backbtnclick(){ // (<)버튼 클릭했을 때
     if(page===1){
-        alert("첫 번째 페이지입니다.");
-        return;
+        page = lastpage;
     }
     else{
         page-=1;
