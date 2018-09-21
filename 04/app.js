@@ -1,4 +1,4 @@
-var wrap = document.getElementById('wrap');
+var wrap = document.querySelector('.wrap');
 var str = "";
 
 for(var i=0; i<4; i++){
