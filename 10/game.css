@@ -13,9 +13,10 @@
     position: absolute;
     left : 5px;
     top : 5px;
+    cursor: pointer;
 }
 
 .board {
     width: 500px;
-    height: 100px;
+    height: 80px;
 }

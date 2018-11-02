@@ -6,7 +6,7 @@ var left = 5;
 var top = 5; 
 
 var score = 0; //점수
-var miss = 0; //miss난 횟수
+var life = 10; //목숨
 
 
 function random(max) {
@@ -26,15 +26,31 @@ function move() {
 }
 
 function catched(){
+    event.stopPropagation();
     score += 1;
     box.style.backgroundColor = "yellow";
     document.querySelector('.score').innerHTML = 'Score : ' + score ;
+    dieBox();
 }
 function misscatched(){
+    life -= 1;
     bg.style.backgroundColor = "red";
+    document.querySelector('.life').innerHTML = 'Life : ' + life ;
+
+    if(life === 0){
+        gameover();
+    }
 }
 
+function dieBox(){
+    //box.style.display = "none";
+    move();
+}
 
+function gameover(){
+    alaert("Game Over");
+    clearInterval();
+}
 
 box.addEventListener("click", catched);
 bg.addEventListener("click", misscatched);
